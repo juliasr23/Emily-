@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>20 Aviamentos — O que é, Classificação, Função e Comparação</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --card2:#0f172a;
+      --text:#e8eefc;
+      --muted:#a9b6d6;
+      --accent:#7c3aed;
+      --line:rgba(255,255,255,.12);
+      --shadow: 0 18px 40px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 15% 10%, rgba(124,58,237,.25), transparent 60%),
+                  radial-gradient(900px 600px at 90% 30%, rgba(59,130,246,.18), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.35;
+    }
+    header{
+      padding: 28px 18px 8px;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+    h1{
+      margin:0;
+      font-size: clamp(22px, 3.2vw, 34px);
+      letter-spacing:.2px;
+    }
+    .subtitle{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 75ch;
+    }
+    main{
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 14px 18px 44px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.04), transparent 45%),
+                  radial-gradient(450px 160px at 20% 0%, rgba(124,58,237,.18), transparent 55%),
+                  var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(255,255,255,.22);
+    }
+    .top{
+      padding: 14px 14px 0;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .top h3{
+      margin:0;
+      font-size: 16px;
+      line-height:1.2;
+    }
+    .tag{
+      font-size: 11px;
+      color: var(--text);
+      background: rgba(59,130,246,.15);
+      border: 1px solid rgba(59,130,246,.35);
+      padding: 6px 8px;
+      border-radius: 999px;
+      white-space:nowrap;
+      flex: 0 0 auto;
+      user-select:none;
+    }
+    .info{
+      padding: 10px 14px 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .info p{ margin: 8px 0; }
+    .label{
+      color: var(--text);
+      font-weight: 700;
+      opacity:.95;
+    }
+    .compare{
+      border-top: 1px solid var(--line);
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 12px;
+      background: rgba(15,23,42,.55);
+    }
+    .shot{
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 14px;
+      overflow:hidden;
+      background: var(--card2);
+    }
+    .shot img{
+      width:100%;
+      height: 140px;
+      object-fit: cover;
+      display:block;
+    }
+    .shot .cap{
+      padding: 8px 10px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,.08);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .cap b{ color: var(--text); font-weight:700; }
+    footer{
+      max-width:1150px;
+      margin:0 auto;
+      padding: 0 18px 26px;
+      color: rgba(233,240,255,.65);
+      font-size: 12px;
+    }
+    code{
+      background: rgba(255,255,255,.06);
+      padding: 2px 6px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>20 tipos de aviamentos</h1>
+    <p class="subtitle">
+      <b>O que é</b>, <b>Classificação</b>, <b>Função</b>.
+    </p>
+  </header>
+
+  <main>
+    <section class="grid">
+
+      <!-- 1) BOTÃO (NOMES ESPECIAIS) -->
+      <article class="card">
+        <div class="top">
+          <h3>1. Botão</h3>
+          <span class="tag">Fechamento</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> peça pequena costurada para encaixar em uma casa/abertura.</p>
+          <p><span class="label">Classificação:</span> Fechamento / acabamento.</p>
+          <p><span class="label">Função:</span> fechar a peça e também decorar.</p>
+        </div>
+        <div class="compare">
+          <div class="shot">
+            <img alt="Com botão" src="1.png">
+            <div class="cap"><b>EM USO</b><span>fechado</span></div>
+          </div>
+          <div class="shot">
+            <img alt="Sem botão" src="1.1.png">
+            <div class="cap"><b>PEÇA</b><span>aviamento</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2) ZÍPER -->
+      <article class="card">
+        <div class="top">
+          <h3>2. Zíper</h3>
+          <span class="tag">Fechamento</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> fecho com dentes e um cursor que abre/fecha puxando.</p>
+          <p><span class="label">Classificação:</span> Fechamento.</p>
+          <p><span class="label">Função:</span> fechar rápido em roupas e acessórios.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com zíper" src="2.png"><div class="cap"><b>EM USO</b><span>fechado</span></div></div>
+          <div class="shot"><img alt="Sem zíper" src="2.2.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 3) VELCRO -->
+      <article class="card">
+        <div class="top">
+          <h3>3. Velcro</h3>
+          <span class="tag">Fechamento</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> duas fitas (gancho e argola) que grudam.</p>
+          <p><span class="label">Classificação:</span> Fechamento / ajuste.</p>
+          <p><span class="label">Função:</span> prender e soltar fácil.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com velcro" src="3.png"><div class="cap"><b>EM USO</b><span>gruda</span></div></div>
+          <div class="shot"><img alt="Sem velcro" src="3.3.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 4) ELÁSTICO -->
+      <article class="card">
+        <div class="top">
+          <h3>4. Elástico</h3>
+          <span class="tag">Ajuste</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> tira que estica e volta ao normal.</p>
+          <p><span class="label">Classificação:</span> Ajuste / conforto.</p>
+          <p><span class="label">Função:</span> ajustar (cós, punho, lingerie).</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com elástico" src="4.png"><div class="cap"><b>EM USO</b><span>franzido</span></div></div>
+          <div class="shot"><img alt="Sem elástico" src="4.4.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 5) VIÉS -->
+      <article class="card">
+        <div class="top">
+          <h3>5. Viés</h3>
+          <span class="tag">Acabamento</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> faixa usada para contornar e finalizar bordas.</p>
+          <p><span class="label">Classificação:</span> Acabamento.</p>
+          <p><span class="label">Função:</span> dar acabamento e reforço.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com viés" src="5.png"><div class="cap"><b>EM USO</b><span>acabado</span></div></div>
+          <div class="shot"><img alt="Sem viés" src="5.5.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 6) RENDA -->
+      <article class="card">
+        <div class="top">
+          <h3>6. Renda</h3>
+          <span class="tag">Decoração</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> tecido vazado/ornamental com desenhos.</p>
+          <p><span class="label">Classificação:</span> Decoração / acabamento.</p>
+          <p><span class="label">Função:</span> enfeitar e valorizar.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com renda" src="6.png"><div class="cap"><b>EM USO</b><span>detalhe</span></div></div>
+          <div class="shot"><img alt="Sem renda" src="6.6.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 7) FITA DE CETIM -->
+      <article class="card">
+        <div class="top">
+          <h3>7. Fita de cetim</h3>
+          <span class="tag">Decoração</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> fita lisa e brilhante (geralmente poliéster).</p>
+          <p><span class="label">Classificação:</span> Decoração / acabamento.</p>
+          <p><span class="label">Função:</span> laços e detalhes bonitos.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com cetim" src="7.png"><div class="cap"><b>EM USO</b><span>com laço</span></div></div>
+          <div class="shot"><img alt="Sem cetim" src="7.7.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 8) FITA DE GORGURÃO -->
+      <article class="card">
+        <div class="top">
+          <h3>8. Fita de gorgurão</h3>
+          <span class="tag">Decoração</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> fita mais grossa e firme, com textura em “ranhuras”.</p>
+          <p><span class="label">Classificação:</span> Decoração / reforço.</p>
+          <p><span class="label">Função:</span> alças e reforços.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com gorgurão" src="8.png"><div class="cap"><b>EM USO</b><span>fita</span></div></div>
+          <div class="shot"><img alt="Sem gorgurão" src="8.8.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 9) PASSAMANARIA -->
+      <article class="card">
+        <div class="top">
+          <h3>9. Passamanaria</h3>
+          <span class="tag">Decoração</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> enfeites prontos (galões, franjas, cordões) aplicados.</p>
+          <p><span class="label">Classificação:</span> Decoração.</p>
+          <p><span class="label">Função:</span> dar estilo e detalhe.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com passamanaria" src="9.png"><div class="cap"><b>EM USO</b><span>enfeite</span></div></div>
+          <div class="shot"><img alt="Sem passamanaria" src="9.9.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 10) ENTRETELA -->
+      <article class="card">
+        <div class="top">
+          <h3>10. Entretela</h3>
+          <span class="tag">Estrutura</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> material interno para dar firmeza.</p>
+          <p><span class="label">Classificação:</span> Estruturação.</p>
+          <p><span class="label">Função:</span> deixar partes mais alinhadas (gola/lapela).</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com entretela" src="10.png"><div class="cap"><b>EM USO</b><span>firme</span></div></div>
+          <div class="shot"><img alt="Sem entretela" src="10.10.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 11) TERMOCOLANTE -->
+      <article class="card">
+        <div class="top">
+          <h3>11. Termocolante (patch)</h3>
+          <span class="tag">Aplicação</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> aplique com cola que gruda com calor (ferro/prensa).</p>
+          <p><span class="label">Classificação:</span> Fixação / aplicação.</p>
+          <p><span class="label">Função:</span> aplicar logo/desenho/reparo.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com patch" src="11.png"><div class="cap"><b>EM USO</b><span>aplicado</span></div></div>
+          <div class="shot"><img alt="Sem patch" src="11.11.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 12) ILHÓS -->
+      <article class="card">
+        <div class="top">
+          <h3>12. Ilhós</h3>
+          <span class="tag">Reforço</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> argolinha colocada no furo do tecido.</p>
+          <p><span class="label">Classificação:</span> Reforço / passagem.</p>
+          <p><span class="label">Função:</span> reforçar o furo para passar cordão.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com ilhós" src="12.png"><div class="cap"><b>EM USO</b><span>reforçado</span></div></div>
+          <div class="shot"><img alt="Sem ilhós" src="12.12.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 13) REBITE -->
+      <article class="card">
+        <div class="top">
+          <h3>13. Rebite</h3>
+          <span class="tag">Reforço</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> peça de metal presa por pressão em pontos do tecido.</p>
+          <p><span class="label">Classificação:</span> Fixação / reforço.</p>
+          <p><span class="label">Função:</span> reforçar cantos e costuras (jeans, bolsos).</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com rebite" src="13.png"><div class="cap"><b>EM USO</b><span>reforça</span></div></div>
+          <div class="shot"><img alt="Sem rebite" src="13.13.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 14) BOTÃO DE PRESSÃO -->
+      <article class="card">
+        <div class="top">
+          <h3>14. Botão de pressão</h3>
+          <span class="tag">Fechamento</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> fecho de duas partes que encaixam com “clic”.</p>
+          <p><span class="label">Classificação:</span> Fechamento.</p>
+          <p><span class="label">Função:</span> fechar de forma rápida e discreta.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com pressão" src="14.png"><div class="cap"><b>EM USO</b><span>clic</span></div></div>
+          <div class="shot"><img alt="Sem pressão" src="14.14.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 15) GANCHO E OLHO -->
+      <article class="card">
+        <div class="top">
+          <h3>15. Gancho e olho</h3>
+          <span class="tag">Fechamento</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> um ganchinho que prende em uma argolinha (olho).</p>
+          <p><span class="label">Classificação:</span> Fechamento.</p>
+          <p><span class="label">Função:</span> fechamento discreto (cós, lingerie, vestidos).</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com gancho e olho" src="15.png"><div class="cap"><b>EM USO</b><span>fecha</span></div></div>
+          <div class="shot"><img alt="Sem gancho e olho" src="15.15.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 16) ARGOLA D -->
+      <article class="card">
+        <div class="top">
+          <h3>16. Argola “D”</h3>
+          <span class="tag">Acessório</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> argola em formato de “D” para prender tiras.</p>
+          <p><span class="label">Classificação:</span> Fixação / acessório.</p>
+          <p><span class="label">Função:</span> prender alças (bolsas, mochilas, cintos).</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com argola D" src="16.png"><div class="cap"><b>EM USO</b><span>encaixe</span></div></div>
+          <div class="shot"><img alt="Sem argola D" src="16.16.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 17) REGULADOR DE ALÇA -->
+      <article class="card">
+        <div class="top">
+          <h3>17. Regulador de alça</h3>
+          <span class="tag">Ajuste</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> peça que permite aumentar/diminuir uma alça.</p>
+          <p><span class="label">Classificação:</span> Ajuste / acessório.</p>
+          <p><span class="label">Função:</span> ajustar o tamanho de alças (sutiã, mochila, bolsa).</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com regulador" src="17.png"><div class="cap"><b>EM USO</b><span>ajusta</span></div></div>
+          <div class="shot"><img alt="Sem regulador" src="17.17.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 18) ETIQUETA -->
+      <article class="card">
+        <div class="top">
+          <h3>18. Etiqueta</h3>
+          <span class="tag">Identificação</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> peça com informações da roupa.</p>
+          <p><span class="label">Classificação:</span> Identificação / acabamento.</p>
+          <p><span class="label">Função:</span> marca, tamanho, composição e lavagem.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com etiqueta" src="18.png"><div class="cap"><b>EM USO</b><span>informações</span></div></div>
+          <div class="shot"><img alt="Sem etiqueta" src="18.18.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 19) LINHA (PESPONTO) -->
+      <article class="card">
+        <div class="top">
+          <h3>19. Linha (pesponto/costura)</h3>
+          <span class="tag">Fixação</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> fio usado para unir partes (na máquina ou à mão).</p>
+          <p><span class="label">Classificação:</span> Fixação / montagem.</p>
+          <p><span class="label">Função:</span> unir, reforçar e dar acabamento.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com costura" src="19.png"><div class="cap"><b>EM USO</b><span>segura</span></div></div>
+          <div class="shot"><img alt="Sem costura" src="19.19.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+      <!-- 20) ALFINETE DE SEGURANÇA -->
+      <article class="card">
+        <div class="top">
+          <h3>20. Alfinete de segurança</h3>
+          <span class="tag">Apoio</span>
+        </div>
+        <div class="info">
+          <p><span class="label">O que é:</span> alfinete com trava para prender com mais segurança.</p>
+          <p><span class="label">Classificação:</span> Apoio / ajuste temporário.</p>
+          <p><span class="label">Função:</span> prender provisoriamente e ajustar.</p>
+        </div>
+        <div class="compare">
+          <div class="shot"><img alt="Com alfinete (usando)" src="20.png"><div class="cap"><b>EM USO</b><span>prendendo</span></div></div>
+          <div class="shot"><img alt="Sem alfinete" src="20.20.png"><div class="cap"><b>PEÇA</b><span>aviamento</span></div></div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+</body>
+</html>
